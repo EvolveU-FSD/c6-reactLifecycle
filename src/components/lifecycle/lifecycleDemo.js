@@ -1,7 +1,8 @@
 import {useEffect, useState} from 'react'
 
 export default function LifeCycleDemo(){
-    var [counter, setCounter] = useState(0)
+    
+    const [counter, setCounter] = useState(0)
 
     useEffect(() => {
         console.log('this fires every time state changes even if in the parent')
@@ -18,7 +19,7 @@ export default function LifeCycleDemo(){
     // useEffect(()=>{
     //     // console.log('this fires once when it starts then the guard never changes')
     //     return ()=> {
-    //         console.log('this fires after the page is lost')
+    //         console.log('this fires when the page unmounts')
     //     }
     // }, [])
 
